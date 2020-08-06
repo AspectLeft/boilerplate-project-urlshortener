@@ -26,11 +26,12 @@ app.get('/', function(req, res){
 });
 
   
-// your first API endpoint... 
-app.get("/api/hello", function (req, res) {
-  res.json({greeting: 'hello API'});
-});
+// // your first API endpoint... 
+// app.get("/api/hello", function (req, res) {
+//   res.json({greeting: 'hello API'});
+// });
 
+app.use('/api', require('./api'))
 
 app.listen(port, function () {
   console.log('Node.js listening ...');
